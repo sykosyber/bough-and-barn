@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bough"
+version = "0.2.0"
+description = "Staged-tree compiler for typed hypergraph rewrite systems, over OSAHR 0.2."
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [{ name = "Bough" }]
+license = { text = "MIT" }
+dependencies = [
+  "osahr @ git+https://github.com/SyberLabs/OSAHR_Cell.git@59cbe0c3ebef2f8c972a7745009c7d60d0c5fe3a",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+bough = "bough.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
