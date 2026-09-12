@@ -1,0 +1,41 @@
+{
+  "task_name": "two_stage_implementation_smoke",
+  "evidence_grade": "synthetic_smoke_not_model_performance",
+  "max_total_turns": 3,
+  "results": [
+    {
+      "policy": "single",
+      "passed": true,
+      "turn_budget": 3,
+      "turns_used": 1,
+      "credits_used": 1.0,
+      "runtime_executions": 1,
+      "agent_total": 1,
+      "specialists_spawned": 0,
+      "audit_matches": true
+    },
+    {
+      "policy": "fixed_team",
+      "passed": true,
+      "turn_budget": 3,
+      "turns_used": 2,
+      "credits_used": 2.0,
+      "runtime_executions": 2,
+      "agent_total": 3,
+      "specialists_spawned": 2,
+      "audit_matches": true
+    },
+    {
+      "policy": "barn",
+      "passed": true,
+      "turn_budget": 3,
+      "turns_used": 2,
+      "credits_used": 2.0,
+      "runtime_executions": 2,
+      "agent_total": 2,
+      "specialists_spawned": 1,
+      "audit_matches": true
+    }
+  ],
+  "interpretation": "On this simple scripted task, the single-agent baseline is more inference-efficient than Barn. Barn uses fewer staffed agents than the fixed team by delaying specialization until the implementation capability gap appears. This is a coordination-plumbing smoke test, not evidence that Barn improves real model performance."
+}
