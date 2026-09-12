@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Barn — Artifact-conditioned agents</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <main class="shell">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">BARN 0.1</p>
+        <h1>The work builds the crew.</h1>
+        <p class="lede">An inspectable agent organization that grows only when unresolved work licenses specialization, then contracts when the obligation is discharged.</p>
+      </div>
+      <div class="controls">
+        <button id="bootstrap">Bootstrap demo</button>
+        <button id="complete" class="secondary" disabled>Complete specialist branch</button>
+      </div>
+    </header>
+
+    <section class="statusbar">
+      <span id="run-status">No run loaded.</span>
+      <span id="counts"></span>
+    </section>
+
+    <section class="grid two">
+      <article class="panel">
+        <div class="panel-head"><h2>Work graph</h2><span>obligations</span></div>
+        <svg id="work-graph" class="graph" role="img" aria-label="Work graph"></svg>
+      </article>
+      <article class="panel">
+        <div class="panel-head"><h2>Crew graph</h2><span>licensed organization</span></div>
+        <svg id="crew-graph" class="graph" role="img" aria-label="Crew graph"></svg>
+      </article>
+    </section>
+
+    <section class="grid detail-grid">
+      <article class="panel why-panel">
+        <div class="panel-head"><h2>Why does this agent exist?</h2><span>causal path</span></div>
+        <ol id="why-list" class="why-list"><li>Select a specialist node.</li></ol>
+      </article>
+      <article class="panel">
+        <div class="panel-head"><h2>Committed events</h2><span>append-only trace</span></div>
+        <div id="events" class="events"></div>
+      </article>
+    </section>
+  </main>
+  <script src="/static/app.js" defer></script>
+</body>
+</html>
